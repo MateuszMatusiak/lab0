@@ -5,8 +5,13 @@ import java.util.List;
 
 public class TailsGenerator {
 
-    public List<String> tails(String value) {
-        return new ArrayList<>(value.length());
+
+    public List<String> tails(String value){
+        ArrayList<String> list = new ArrayList<>();
+        for(int i=0;i<value.length()+1;++i){
+            list.add(value.substring(i));
+        }
+        return list;
     }
 
 }
